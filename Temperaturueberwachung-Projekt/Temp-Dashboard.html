@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .main-container {
+            margin: 20px;
+        }
+        .sensor-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .sensor-info .icon {
+            font-size: 20px;
+            margin-right: 10px;
+        }
+        .sensor-info .alert-danger {
+            font-size: 16px;
+            margin-left: 10px;
+        }
+        .temp-set {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .temp-set input {
+            width: 100px;
+            text-align: center;
+        }
+        .protocol {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="main-container">
+    <!-- Header -->
+    <div class="d-flex justify-content-between mb-3">
+        <div>
+            <span>Username</span> | <strong>Temperaturüberwachung</strong>
+        </div>
+        <div>
+            <span>Dark- / Whitemode</span>
+            <input type="checkbox" class="form-check-input mx-2">
+            <a href="#" class="btn btn-link">Logout</a>
+        </div>
+    </div>
+
+    <!-- Sensor Table -->
+    <div class="table-responsive">
+        <table class="table table-bordered text-center align-middle">
+            <thead>
+            <tr>
+                <th>Sensor</th>
+                <th>current</th>
+                <th>all time max</th>
+                <th>average</th>
+                <th>current max. Temp.</th>
+                <th>Set max. Temp</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="sensor-info">
+                    <span class="icon text-primary">ℹ️</span> Sensor 1
+                </td>
+                <td>26°C</td>
+                <td>37°C</td>
+                <td>30°C</td>
+                <td>35°C</td>
+                <td>
+                    <div class="temp-set">
+                        <input type="text" class="form-control" value="35°C">
+                        <button class="btn btn-primary ms-2">Set</button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="sensor-info">
+                    <span class="icon text-primary">ℹ️</span> Sensor 2
+                </td>
+                <td class="text-danger">40°C</td>
+                <td class="text-danger">40°C <span class="alert-danger">❗</span></td>
+                <td>32°C</td>
+                <td>35°C</td>
+                <td>
+                    <div class="temp-set">
+                        <input type="text" class="form-control" value="35°C">
+                        <button class="btn btn-primary ms-2">Set</button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Values and Protocol Section -->
+    <div class="row mt-5">
+        <div class="col-md-6">
+            <h5>letzte Werte</h5>
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th>Sensor 1</th>
+                    <th>Sensor 2</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-6">
+            <h5>Protokoll</h5>
+            <div class="protocol">
+                <ul>
+                    <li>Protokolltext...</li>
+                    <li>Protokolltext...</li>
+                    <li>Protokolltext...</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
