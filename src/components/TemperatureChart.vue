@@ -21,7 +21,7 @@ export default defineComponent({
         required: true,
         },
     },
-    setup(props) {
+    setup() {
         const sensorStore = useSensorStore();
 
         const chartData = computed(() => {
